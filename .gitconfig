@@ -1,0 +1,10 @@
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+[user]
+	name = 張ジョンホ
+	email = jeongho.jang@nhn.com
+[credential]
+	helper = cache --timeout 3600
