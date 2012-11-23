@@ -1,1 +1,4 @@
 alias ls='ls -G'
+#alias ls='ls --color'
+#alias gitk='/cygdrive/c/Program\ Files\ \(x86\)/Git/cmd/gitk.cmd'
+
