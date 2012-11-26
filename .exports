@@ -1,7 +1,23 @@
-ECLIPSE_HOME=$HOME/local/eclipse
+#! /bin/sh
+
+ECLIPSE_HOME=$HOME/local/eclipse-juno
 ANDROID_SDK_HOME=$HOME/local/android-sdk-mac_x86
 
 #SCALA_HOME=$HOME/local/scala-2.10.0-M5
 SCALA_HOME=$HOME/local/scala-2.9.2
 
-export PATH=$ECLIPSE_HOME:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$SCALA_HOME/bin:$PATH
+YJP_HOME=$HOME/local/yjp-11.0.3
+
+SUBLIME_TEXT_HOME=$HOME/local/Sublime\ Text\ 2
+
+PLAY_HOME=$HOME/local/play-2.0
+
+MAVEN_HOME=$HOME/local/apache-maven-3.0.3
+
+THRIFT_HOME=$HOME/local/thrift-0.6.1
+
+REDIS_HOME=$HOME/local/redis-2.2.12
+
+PROTOBUF_HOME=$HOME/local/protobuf-2.4.1
+
+export PATH=$YJP_HOME/bin:$SUBLIME_TEXT_HOME:$PLAY_HOME:$MAVEN_HOME/bin:$THRIFT_HOME/bin:$REDIS_HOME/bin:$PROTOBUF_HOME/bin:$ECLIPSE_HOME:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$SCALA_HOME/bin:$PATH
