@@ -1,5 +1,10 @@
 #! /bin/sh
 
+
+#
+# PATH
+#
+
 ECLIPSE_HOME=$HOME/local/eclipse-juno
 ANDROID_SDK_HOME=$HOME/local/android-sdk-mac_x86
 
@@ -21,3 +26,19 @@ REDIS_HOME=$HOME/local/redis-2.2.12
 PROTOBUF_HOME=$HOME/local/protobuf-2.4.1
 
 export PATH=$YJP_HOME/bin:$SUBLIME_TEXT_HOME:$PLAY_HOME:$MAVEN_HOME/bin:$THRIFT_HOME/bin:$REDIS_HOME/bin:$PROTOBUF_HOME/bin:$ECLIPSE_HOME:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$SCALA_HOME/bin:$PATH
+
+
+#
+# PS1
+#
+
+# From http://hocuspokus.net/2008/01/a-better-ls-for-mac-os-x/
+
+# Terminal colours (after installing GNU coreutils)
+NM="\[\033[0;38m\]" #means no background and white lines
+HI="\[\033[0;37m\]" #change this for letter colors
+HII="\[\033[0;31m\]" #change this for letter colors
+SI="\[\033[0;33m\]" #this is for the current directory
+IN="\[\033[0m\]"
+
+export PS1="$NM[ $HI\u $HII\h $SI\w$NM ] $IN$ "
