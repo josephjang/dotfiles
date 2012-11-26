@@ -1,4 +1,17 @@
-alias ls='ls -G'
-#alias ls='ls --color'
-#alias gitk='/cygdrive/c/Program\ Files\ \(x86\)/Git/cmd/gitk.cmd'
 
+OSNAME=`uname -s`
+
+if [ $OSNAME == 'Linux' ]; then
+LS_OPTIONS='--color'
+elif [ $OSNAME == 'Darwin' ]; then
+LS_OPTIONS='-G'
+else
+LS_OPTIONS=''
+fi
+
+alias ls='ls $LS_OPTIONS -hF'
+alias ll='ls $LS_OPTIONS -lhF'
+alias l='ls $LS_OPTIONS -lAhF'
+alias gk='gitk'
+alias gka='gitk --all'
+#alias gitk='/cygdrive/c/Program\ Files\ \(x86\)/Git/cmd/gitk.cmd'
