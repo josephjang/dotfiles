@@ -1,5 +1,9 @@
 #! /bin/sh
 
+#
+# EDITOR
+#
+export EDITOR=vim
 
 #
 # PATH
@@ -15,9 +19,9 @@ YJP_HOME=$HOME/local/yjp-11.0.3
 
 SUBLIME_TEXT_HOME=$HOME/local/Sublime\ Text\ 2
 
-PLAY_HOME=$HOME/local/play-2.1.0
+PLAY_HOME=$HOME/local/play-2.1.1
 
-MAVEN_HOME=$HOME/local/apache-maven-3.0.3
+MAVEN_HOME=$HOME/local/apache-maven-3.0.5
 
 THRIFT_HOME=$HOME/local/thrift-0.7.0
 
@@ -27,8 +31,10 @@ PROTOBUF_HOME=$HOME/local/protobuf-2.4.1
 
 IDEA_HOME=$HOME/local/idea-IC-123.169
 
+PNGQUANT_HOME=$HOME/local/pngquant
 
-export PATH=$IDEA_HOME/bin:$YJP_HOME/bin:$SUBLIME_TEXT_HOME:$PLAY_HOME:$MAVEN_HOME/bin:$THRIFT_HOME/bin:$REDIS_HOME/bin:$PROTOBUF_HOME/bin:$ECLIPSE_HOME:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$SCALA_HOME/bin:$PATH
+
+export PATH=$IDEA_HOME/bin:$YJP_HOME/bin:$SUBLIME_TEXT_HOME:$PLAY_HOME:$MAVEN_HOME/bin:$THRIFT_HOME/bin:$REDIS_HOME/bin:$PROTOBUF_HOME/bin:$ECLIPSE_HOME:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$SCALA_HOME/bin:$PATH:$PNGQUANT_HOME
 
 
 #
