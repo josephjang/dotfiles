@@ -5,6 +5,8 @@ if [ $OSNAME == 'Linux' ]; then
 LS_OPTIONS='--color'
 elif [ $OSNAME == 'Darwin' ]; then
 LS_OPTIONS='-G'
+elif [ $(expr substr $OSNAME 1 6) == 'CYGWIN' ]; then
+LS_OPTIONS='--color'
 else
 LS_OPTIONS=''
 fi
