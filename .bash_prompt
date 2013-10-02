@@ -1,0 +1,24 @@
+#! /bin/sh
+
+#
+# PS1
+#
+
+# From http://hocuspokus.net/2008/01/a-better-ls-for-mac-os-x/
+
+# Terminal colours (after installing GNU coreutils)
+NM="\[\033[0;38m\]" #means no background and white lines
+HI="\[\033[0;37m\]" #change this for letter colors
+HII="\[\033[0;31m\]" #change this for letter colors
+SI="\[\033[0;33m\]" #this is for the current directory
+IN="\[\033[0m\]"
+
+if [ -f .git-prompt.sh ]; then
+source .git-prompt.sh
+export PS1="$NM[ $HI\u $HII\h $SI\w$NM $(__git_ps1 "(%s)")] $IN$ "
+else
+export PS1="$NM[ $HI\u $HII\h $SI\w$NM ] $IN$ "
+fi
+
+#export GIT_PROMPT_START="$NM[ $HI\u $HII\h $SI\w$NM"
+#export GIT_PROMPT_END=" ] $IN$ "
