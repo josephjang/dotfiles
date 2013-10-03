@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 #
 # PS1
@@ -14,10 +14,14 @@ SI="\[\033[0;33m\]" #this is for the current directory
 IN="\[\033[0m\]"
 
 if [ -f .git-prompt.sh ]; then
+
 source .git-prompt.sh
 export PS1="$NM[ $HI\u $HII\h $SI\w$NM $(__git_ps1 "(%s)")] $IN$ "
+
 else
+
 export PS1="$NM[ $HI\u $HII\h $SI\w$NM ] $IN$ "
+
 fi
 
 #export GIT_PROMPT_START="$NM[ $HI\u $HII\h $SI\w$NM"
