@@ -6,6 +6,12 @@
 export EDITOR=vim
 
 #
+# MAVEN_OPTS
+#
+export MAVEN_OPTS="-Xmx1g"
+
+
+#
 # PATH
 #
 
