@@ -4,7 +4,9 @@
 	interactive = auto
 	diff = auto
 [user]
-	name = 張ジョンホ
-	email = jeongho.jang@nhn.com
+	name = Jeongho Jang
+	email = jeongho.jang@linecorp.com
 [credential]
 	helper = cache --timeout 3600
+[push]
+	default = simple
