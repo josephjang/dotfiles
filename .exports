@@ -10,6 +10,10 @@ export EDITOR=vim
 #
 export MAVEN_OPTS="-Xmx1g"
 
+#
+# Java
+#
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7.0`
 
 #
 # PATH
@@ -27,7 +31,7 @@ SUBLIME_TEXT_HOME=$HOME/local/Sublime\ Text\ 2
 
 PLAY_HOME=$HOME/local/play-2.1.1
 
-MAVEN_HOME=$HOME/local/apache-maven-3.0.5
+MAVEN_HOME=$HOME/local/apache-maven-3.2.3
 
 THRIFT_HOME=$HOME/local/thrift-0.7.0
 
