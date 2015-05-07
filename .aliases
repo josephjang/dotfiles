@@ -20,7 +20,7 @@ alias gka='gitk --all &'
 #alias gitk='/cygdrive/c/Program\ Files\ \(x86\)/Git/cmd/gitk.cmd'
 
 if [ $OSNAME == 'Darwin' ]; then
-alias mvn_j8='/usr/libexec/java_home -v 1.8.0 --exec mvn'
-alias mvn_j7='/usr/libexec/java_home -v 1.7.0 --exec mvn'
-alias mvn_j6='/usr/libexec/java_home -v 1.6.0 --exec mvn'
+alias mvn_j8='JAVA_HOME=`/usr/libexec/java_home -v 1.8.0` mvn'
+alias mvn_j7='JAVA_HOME=`/usr/libexec/java_home -v 1.7.0` mvn'
+alias mvn_j6='JAVA_HOME=`/usr/libexec/java_home -v 1.6.0` mvn'
 fi
