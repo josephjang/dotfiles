@@ -1,3 +1,5 @@
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
+[ -x /usr/local/bin/archey ] && /usr/local/bin/archey -c
+
