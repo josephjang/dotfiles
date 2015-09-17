@@ -21,3 +21,10 @@ au BufRead,BufNewFile *.md set filetype=md
 au! Syntax thrift source ~/.vim/thrift.vim
 au! Syntax proto source ~/.vim/proto.vim
 
+""" bash scripts (*.sh)
+
+" use 2 spaces
+au BufRead,BufNewFile *.sh set sw=2 sts=2 expandtab
+" automatically indent on loading
+au BufRead *.sh normal gg=G
+
