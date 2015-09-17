@@ -16,17 +16,17 @@ IN="\[\033[0m\]"
 if [ -d $HOME/.bash-git-prompt ]; then
 
 source $HOME/.bash-git-prompt/gitprompt.sh
-export GIT_PROMPT_START="$NM[ $HI\u $HII\h $SI\w$NM"
+export GIT_PROMPT_START="$NM[ $HI\u $HII\h $SI\W$NM"
 export GIT_PROMPT_END=" ] $IN$ "
 	
 elif [ -f .$HOME/git-prompt.sh ]; then
 
 source $HOME/.git-prompt.sh
-export PS1="$NM[ $HI\u $HII\h $SI\w$NM $(__git_ps1 "(%s)")] $IN$ "
+export PS1="$NM[ $HI\u $HII\h $SI\W$NM $(__git_ps1 "(%s)")] $IN$ "
 
 else
 
-export PS1="$NM[ $HI\u $HII\h $SI\w$NM ] $IN$ "
+export PS1="$NM[ $HI\u $HII\h $SI\W$NM ] $IN$ "
 
 fi
 
