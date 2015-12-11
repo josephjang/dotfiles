@@ -13,7 +13,7 @@ export MAVEN_OPTS="-Xmx1g"
 #
 # Java
 #
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7.0`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0`
 
 #
 # PATH
