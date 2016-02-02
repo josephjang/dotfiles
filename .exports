@@ -16,6 +16,11 @@ export MAVEN_OPTS="-Xmx1g"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0`
 
 #
+# Go
+#
+export GOPATH=$HOME/projects/go-projects
+
+#
 # PATH
 #
 
@@ -49,5 +54,5 @@ OCTAVE_HOME="/usr/local/octave/3.8.0"
 
 SPARK_HOME=$HOME/local/spark-1.5.1-bin-hadoop1
 
-export PATH=$IDEA_HOME/bin:$YJP_HOME/bin:$SUBLIME_TEXT_HOME:$PLAY_HOME:$MAVEN_HOME/bin:$THRIFT_HOME/bin:$REDIS_HOME/bin:$PROTOBUF_HOME/bin:$ECLIPSE_HOME:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$SCALA_HOME/bin:$PATH:$PNGQUANT_HOME:$SUBLIME_HOME/bin:$OCTAVE_HOME/bin:$SPARK_HOME/bin
+export PATH=$IDEA_HOME/bin:$YJP_HOME/bin:$SUBLIME_TEXT_HOME:$PLAY_HOME:$MAVEN_HOME/bin:$THRIFT_HOME/bin:$REDIS_HOME/bin:$PROTOBUF_HOME/bin:$ECLIPSE_HOME:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$SCALA_HOME/bin:$PATH:$PNGQUANT_HOME:$SUBLIME_HOME/bin:$OCTAVE_HOME/bin:$SPARK_HOME/bin:$GOPATH/bin
 
