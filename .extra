@@ -1,7 +1,12 @@
+#! /bin/bash
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
 [ -s "$HOME/.git-completion.bash" ] && source "$HOME/.git-completion.bash"
 
 [ -x /usr/local/bin/archey ] && /usr/local/bin/archey -c
+
+[ -x `brew --prefix`/etc/profile.d/z.sh ] && source `brew --prefix`/etc/profile.d/z.sh
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
