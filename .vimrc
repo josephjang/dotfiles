@@ -5,7 +5,7 @@ syntax on
 filetype plugin indent on
 
 set ts=4
-set sts=0
+set sts=4
 set sw=4
 
 " Show the cursor position
