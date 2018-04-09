@@ -6,6 +6,14 @@
 export EDITOR=vim
 
 #
+# PAGER
+#
+# https://github.com/rkitover/vimpager
+if [ -r `brew --prefix`/bin/vimpager ] then
+	export PAGER=vimpager
+fi
+
+#
 # MAVEN_OPTS
 #
 export MAVEN_OPTS="-Xmx1g"
