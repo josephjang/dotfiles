@@ -6,9 +6,7 @@
 
 [ -x /usr/local/bin/archey ] && /usr/local/bin/archey -c
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+[ -s "${HOME}/.iterm2_shell_integration.bash" ] && source "${HOME}/.iterm2_shell_integration.bash"
 
-eval "$(stack --bash-completion-script stack)"
-
-[ -r `brew --prefix`/etc/profile.d/z.sh ] && . `brew --prefix`/etc/profile.d/z.sh
+[ -r `brew --prefix`/etc/profile.d/z.sh ] && source `brew --prefix`/etc/profile.d/z.sh
 
