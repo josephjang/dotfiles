@@ -24,14 +24,14 @@ fi
 export MAVEN_OPTS="-Xmx1g"
 
 #
-# Java
+# JAVA_HOME
 #
 if hash java_home 2> /dev/null; then
 	export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0`
 fi
 
 #
-# Go
+# GOPATH
 #
 export GOPATH=$HOME/projects/go-projects
 
@@ -39,39 +39,5 @@ export GOPATH=$HOME/projects/go-projects
 # PATH
 #
 
-ECLIPSE_HOME=$HOME/local/eclipse-juno
-ANDROID_SDK_HOME=$HOME/local/android-sdk-mac_x86
-
-#SCALA_HOME=$HOME/local/scala-2.10.0-M5
-SCALA_HOME=$HOME/local/scala-2.9.2
-
-YJP_HOME=$HOME/local/yjp-11.0.3
-
-SUBLIME_TEXT_HOME=$HOME/local/Sublime\ Text\ 2
-
-PLAY_HOME=$HOME/local/play-2.1.1
-
-MAVEN_HOME=$HOME/local/apache-maven-3.2.3
-
-THRIFT_HOME=$HOME/local/thrift-0.7.0
-
-REDIS_HOME=$HOME/local/redis-2.2.12
-
-PROTOBUF_HOME=$HOME/local/protobuf-2.4.1
-
-IDEA_HOME=$HOME/local/idea-IC-123.169
-
-PNGQUANT_HOME=$HOME/local/pngquant
-
-SUBLIME_HOME="/Applications/Sublime Text 2.app/Contents/SharedSupport"
-
-OCTAVE_HOME="/usr/local/octave/3.8.0"
-
-SPARK_HOME=$HOME/local/spark-1.5.1-bin-hadoop1
-
-CARGO_BIN=$HOME/.cargo/bin
-
-export RUST_SRC_PATH="/Users/josephjang/sources/rustc-1.21.0-src/src"
-
-export PATH=$IDEA_HOME/bin:$YJP_HOME/bin:$SUBLIME_TEXT_HOME:$PLAY_HOME:$MAVEN_HOME/bin:$THRIFT_HOME/bin:$REDIS_HOME/bin:$PROTOBUF_HOME/bin:$ECLIPSE_HOME:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$SCALA_HOME/bin:$PATH:$PNGQUANT_HOME:$SUBLIME_HOME/bin:$OCTAVE_HOME/bin:$SPARK_HOME/bin:$GOPATH/bin:$CARGO_BIN
+#export PATH=$PATH
 
