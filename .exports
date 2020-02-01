@@ -3,12 +3,17 @@
 #
 # EDITOR
 #
-export EDITOR=vim
+if hash nvim 2> /dev/null; then
+	export EDITOR=nvim
+elif hash vim 2> /dev/null; then
+	export EDITOR=vim
+fi
 
 #
 # PAGER
 #
 # https://github.com/rkitover/vimpager
+#
 if hash vimpager 2> /dev/null; then
 	export PAGER=vimpager
 fi
