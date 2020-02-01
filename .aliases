@@ -3,13 +3,13 @@
 OSNAME=`uname -s`
 
 if [ $OSNAME == 'Linux' ]; then
-LS_OPTIONS='--color'
+	LS_OPTIONS='--color'
 elif [ $OSNAME == 'Darwin' ]; then
-LS_OPTIONS='-G'
+	LS_OPTIONS='-G'
 elif [ $(expr substr $OSNAME 1 6) == 'CYGWIN' ]; then
-LS_OPTIONS='--color'
+	LS_OPTIONS='--color'
 else
-LS_OPTIONS=''
+	LS_OPTIONS=''
 fi
 
 alias ls='ls $LS_OPTIONS -hF'
@@ -23,7 +23,7 @@ alias gka='gitk --all &'
 alias grep='grep --color=auto'
 
 if [ $OSNAME == 'Darwin' ]; then
-alias mvn_j8='JAVA_HOME=`/usr/libexec/java_home -v 1.8.0` mvn'
-alias mvn_j7='JAVA_HOME=`/usr/libexec/java_home -v 1.7.0` mvn'
-alias mvn_j6='JAVA_HOME=`/usr/libexec/java_home -v 1.6.0` mvn'
+	alias mvn_j8='JAVA_HOME=`/usr/libexec/java_home -v 1.8.0` mvn'
+	alias mvn_j7='JAVA_HOME=`/usr/libexec/java_home -v 1.7.0` mvn'
+	alias mvn_j6='JAVA_HOME=`/usr/libexec/java_home -v 1.6.0` mvn'
 fi
