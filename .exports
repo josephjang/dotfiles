@@ -9,7 +9,7 @@ export EDITOR=vim
 # PAGER
 #
 # https://github.com/rkitover/vimpager
-if [ -r `brew --prefix`/bin/vimpager ]; then
+if hash vimpager 2> /dev/null; then
 	export PAGER=vimpager
 fi
 
@@ -21,7 +21,9 @@ export MAVEN_OPTS="-Xmx1g"
 #
 # Java
 #
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0`
+if hash java_home 2> /dev/null; then
+	export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0`
+fi
 
 #
 # Go
