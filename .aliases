@@ -15,7 +15,13 @@ fi
 alias ls='ls $LS_OPTIONS -hF'
 alias ll='ls $LS_OPTIONS -lhF'
 alias l='ls $LS_OPTIONS -lAhF'
-alias vi='vim'
+
+if hash nvim 2> /dev/null; then
+	alias vi='nvim'
+elif hash vim 2> /dev/null; then
+	alias vi='vim'
+fi
+
 alias gk='gitk &'
 alias gka='gitk --all &'
 #alias gitk='/cygdrive/c/Program\ Files\ \(x86\)/Git/cmd/gitk.cmd'
@@ -27,3 +33,4 @@ if [ $OSNAME == 'Darwin' ]; then
 	alias mvn_j7='JAVA_HOME=`/usr/libexec/java_home -v 1.7.0` mvn'
 	alias mvn_j6='JAVA_HOME=`/usr/libexec/java_home -v 1.6.0` mvn'
 fi
+
