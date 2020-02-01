@@ -5,7 +5,8 @@
 	diff = auto
 [user]
 	name = Jeongho Jang
-	email = jeongho.jang@linecorp.com
+#	email = jeongho.jang@linecorp.com
+	email = josephjang@gmail.com
 [credential]
 	helper = cache --timeout 3600
 [push]
