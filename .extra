@@ -4,11 +4,16 @@
 
 [ -s "$HOME/.git-completion.bash" ] && source "$HOME/.git-completion.bash"
 
-[ -x /usr/local/bin/archey ] && /usr/local/bin/archey -c
-
 [ -s "${HOME}/.iterm2_shell_integration.bash" ] && source "${HOME}/.iterm2_shell_integration.bash"
 
 if hash brew 2> /dev/null; then
 	[ -r `brew --prefix`/etc/profile.d/z.sh ] && source `brew --prefix`/etc/profile.d/z.sh
+fi
+
+# Logo
+if hash neofetch 2> /dev/null; then
+	neofetch
+elif hash archey 2> /dev/null; then
+	archey -c
 fi
 
