@@ -1,11 +1,17 @@
 #!/bin/bash
+
 cd "$(dirname "$0")"
+
 git pull
 git submodule init
 git submodule update
+
 function doIt() {
-  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --include ".**" -av . ~
+  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" \
+    --include ".**" \
+    --archive --verbose . ~
 }
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   doIt
 else
