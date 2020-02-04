@@ -28,7 +28,7 @@ export MAVEN_OPTS="-Xmx1g"
 #
 readonly java_home_executable='/usr/libexec/java_home'
 if test -x ${java_home_executable} 2> /dev/null; then
-	export JAVA_HOME=`${java_home_executable} -v 11`
+	export JAVA_HOME=`${java_home_executable} -v 1.8`
 fi
 
 #
