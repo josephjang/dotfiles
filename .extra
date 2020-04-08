@@ -4,7 +4,9 @@
 
 [ -s "$HOME/.git-completion.bash" ] && source "$HOME/.git-completion.bash"
 
-[ -s "${HOME}/.iterm2_shell_integration.bash" ] && source "${HOME}/.iterm2_shell_integration.bash"
+if [ "$TERM_PROGRAM" == 'iTerm.app' ]; then
+	[ -s "${HOME}/.iterm2_shell_integration.bash" ] && source "${HOME}/.iterm2_shell_integration.bash"
+fi
 
 if hash brew 2> /dev/null; then
 	[ -r `brew --prefix`/etc/profile.d/z.sh ] && source `brew --prefix`/etc/profile.d/z.sh
