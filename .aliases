@@ -26,4 +26,5 @@ alias gk='gitk &'
 alias gka='gitk --all &'
 
 alias grep='grep --color=auto'
+alias diff='diff --color=auto'
 
