@@ -19,3 +19,6 @@ elif hash archey 2> /dev/null; then
 	archey -c
 fi
 
+# rupa/z
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
