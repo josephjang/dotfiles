@@ -22,3 +22,6 @@ fi
 # rupa/z
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
+# garabik/grc
+[[ -s "/etc/profile.d/grc.bashrc" ]] && source /etc/profile.d/grc.bashrc
+
