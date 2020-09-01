@@ -1,6 +1,15 @@
 " pathogen
 execute pathogen#infect()
 
+" vim-plug
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
 syntax on
 filetype plugin indent on
 
