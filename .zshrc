@@ -113,3 +113,6 @@ source $ZSH/oh-my-zsh.sh
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
+# rupa/z
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
