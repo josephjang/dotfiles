@@ -10,3 +10,6 @@
 [submodule ".config/kitty/kitty-themes"]
 	path = .config/kitty/kitty-themes
 	url = git@github.com:dexpota/kitty-themes.git
+[submodule ".oh-my-zsh-custom/powerlevel10k"]
+	path = .oh-my-zsh-custom/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
