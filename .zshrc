@@ -120,3 +120,6 @@ source $ZSH/oh-my-zsh.sh
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
+# Load exports
+[ -r ~/.exports ] && source ~/.exports
+
