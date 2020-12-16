@@ -84,7 +84,12 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
-plugins=(grc z)
+plugins=(grc pip rust rustup z)
+
+# auto-completion is provided by Arch Linux packages:
+#	git docker pipenv
+# auto-completion is provided by zsh-completions:
+#	httpie
 
 source $ZSH/oh-my-zsh.sh
 
