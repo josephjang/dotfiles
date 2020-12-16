@@ -77,7 +77,7 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
-plugins=(z)
+plugins=(grc z)
 
 source $ZSH/oh-my-zsh.sh
 
