@@ -117,9 +117,12 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Load ~/.exports and ~/.aliases
+for file in ~/.{exports,aliases}; do
+	[ -r "$file" ] && source "$file"
+done
+unset file
+
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
-
-# Load exports
-[ -r ~/.exports ] && source ~/.exports
 
