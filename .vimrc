@@ -57,3 +57,6 @@ let g:syntastic_check_on_wq = 0
 """ plugin: rust.vim
 let g:rustfmt_autosave = 1
 
+""" plugin: tagbar
+nmap <F8> :TagbarToggle<CR>
+
