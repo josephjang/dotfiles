@@ -26,5 +26,14 @@ alias gk='gitk &'
 alias gka='gitk --all &'
 
 alias grep='grep --color=auto'
-alias diff='diff --color=auto'
+
+if [ $OSNAME = 'Linux' ]; then
+	alias diff='diff --color=auto'
+elif [ $OSNAME = 'Darwin' ]; then
+	if hash colordiff 2> /dev/null; then
+		alias diff='colordiff'
+	else
+		;
+	fi
+fi
 
