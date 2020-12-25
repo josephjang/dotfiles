@@ -20,6 +20,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Vim plugin that displays tags in a window, ordered by scope
 Plug 'preservim/tagbar'
 
+" (as a dependency of vim-markdown)
+" Vim script for text filtering and alignment
+Plug 'godlygeek/tabular'
+
+" Markdown Vim Mode
+Plug 'plasticboy/vim-markdown'
+
 call plug#end()
 
 syntax on
@@ -38,7 +45,6 @@ set hlsearch
 
 au BufRead,BufNewFile *.thrift set filetype=thrift
 au BufRead,BufNewFile *.proto set filetype=proto
-au BufRead,BufNewFile *.md set filetype=md
 au! Syntax thrift source ~/.vim/thrift.vim
 au! Syntax proto source ~/.vim/proto.vim
 
