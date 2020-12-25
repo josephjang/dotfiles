@@ -17,6 +17,9 @@ Plug 'vim-syntastic/syntastic'
 " Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Vim plugin that displays tags in a window, ordered by scope
+Plug 'preservim/tagbar'
+
 call plug#end()
 
 syntax on
