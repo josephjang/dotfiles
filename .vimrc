@@ -14,6 +14,9 @@ Plug 'rust-lang/rust.vim'
 " Syntax checking hacks for vim
 Plug 'vim-syntastic/syntastic'
 
+" Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 syntax on
