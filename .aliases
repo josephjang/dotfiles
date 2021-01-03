@@ -33,7 +33,7 @@ elif [ $OSNAME = 'Darwin' ]; then
 	if hash colordiff 2> /dev/null; then
 		alias diff='colordiff'
 	else
-		;
+		:
 	fi
 fi
 
