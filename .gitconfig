@@ -11,3 +11,7 @@
 	helper = cache --timeout 3600
 [push]
 	default = simple
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
