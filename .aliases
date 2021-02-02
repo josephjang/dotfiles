@@ -2,19 +2,26 @@
 
 OSNAME=`uname -s`
 
-if [ $OSNAME = 'Linux' ]; then
-	LS_OPTIONS='--color'
-elif [ $OSNAME = 'Darwin' ]; then
-	LS_OPTIONS='-G'
-elif [ $(expr substr $OSNAME 1 6) = 'CYGWIN' ]; then
-	LS_OPTIONS='--color'
+if hash lsd 2> /dev/null; then
+	alias ls='lsd'
+	alias ll='lsd -l'
+	alias l='lsd -lA'
 else
-	LS_OPTIONS=''
+	if [ $OSNAME = 'Linux' ]; then
+		LS_OPTIONS='--color'
+	elif [ $OSNAME = 'Darwin' ]; then
+		LS_OPTIONS='-G'
+	elif [ $(expr substr $OSNAME 1 6) = 'CYGWIN' ]; then
+		LS_OPTIONS='--color'
+	else
+		LS_OPTIONS=''
+	fi
+
+	alias ls='ls $LS_OPTIONS -hF'
+	alias ll='ls $LS_OPTIONS -lhF'
+	alias l='ls $LS_OPTIONS -lAhF'
 fi
 
-alias ls='ls $LS_OPTIONS -hF'
-alias ll='ls $LS_OPTIONS -lhF'
-alias l='ls $LS_OPTIONS -lAhF'
 
 if hash nvim 2> /dev/null; then
 	alias vi='nvim'
