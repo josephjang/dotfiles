@@ -30,6 +30,9 @@ Plug 'plasticboy/vim-markdown'
 " A 24bit colorscheme for Vim, Airline and Lightline
 Plug 'jacoborus/tender.vim'
 
+" A light and configurable statusline/tabline plugin for Vim
+Plug 'itchyny/lightline.vim'
+
 call plug#end()
 
 syntax on
@@ -87,6 +90,11 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " Theme
 syntax enable
 colorscheme tender
+
+""" plugin: lightline
+
+" set lighline theme inside lightline config
+let g:lightline = { 'colorscheme': 'tender' }
 
 """ plugin: coc
 
