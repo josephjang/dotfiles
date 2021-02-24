@@ -27,6 +27,9 @@ Plug 'godlygeek/tabular'
 " Markdown Vim Mode
 Plug 'plasticboy/vim-markdown'
 
+" A 24bit colorscheme for Vim, Airline and Lightline
+Plug 'jacoborus/tender.vim'
+
 call plug#end()
 
 syntax on
@@ -72,6 +75,18 @@ let g:rustfmt_autosave = 1
 """ plugin: tagbar
 nmap <F8> :TagbarToggle<CR>
 
+""" plugin: tender
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Theme
+syntax enable
+colorscheme tender
 
 """ plugin: coc
 
