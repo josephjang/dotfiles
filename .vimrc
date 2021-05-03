@@ -49,6 +49,8 @@ set title
 
 set hlsearch
 
+set clipboard=unnamedplus
+
 au BufRead,BufNewFile *.thrift set filetype=thrift
 au BufRead,BufNewFile *.proto set filetype=proto
 au! Syntax thrift source ~/.vim/thrift.vim
