@@ -52,5 +52,5 @@ export GOPATH=$HOME/projects/go-projects
 # PATH
 #
 
-#export PATH=$PATH
+export PATH=$PATH:/opt/homebrew/bin
 
