@@ -49,7 +49,7 @@ set title
 
 set hlsearch
 
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
 
 au BufRead,BufNewFile *.thrift set filetype=thrift
 au BufRead,BufNewFile *.proto set filetype=proto
