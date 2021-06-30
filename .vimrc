@@ -33,6 +33,9 @@ Plug 'jacoborus/tender.vim'
 " A light and configurable statusline/tabline plugin for Vim
 Plug 'itchyny/lightline.vim'
 
+" CoffeeScript support for vim
+Plug 'kchmck/vim-coffee-script'
+
 call plug#end()
 
 syntax on
@@ -265,4 +268,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
