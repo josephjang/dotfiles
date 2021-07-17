@@ -66,6 +66,9 @@ au BufRead,BufNewFile *.sh set sw=2 sts=2 expandtab
 " automatically indent on loading
 au BufRead *.sh normal gg=G
 
+""" JavaScript
+autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
 """ plugin: syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
