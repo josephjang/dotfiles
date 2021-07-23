@@ -33,11 +33,20 @@ Plug 'jacoborus/tender.vim'
 " A light and configurable statusline/tabline plugin for Vim
 Plug 'itchyny/lightline.vim'
 
+" Vastly improved Javascript indentation and syntax support in Vim.
+Plug 'pangloss/vim-javascript'
+
 " CoffeeScript support for vim
 Plug 'kchmck/vim-coffee-script'
 
+" mustache and handlebars mode for vim
+Plug 'mustache/vim-mustache-handlebars'
+
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" Literate CoffeeScript syntax highlighting and indentation support for vim
+"Plug 'jwhitley/vim-literate-coffeescript'
 
 call plug#end()
 
@@ -138,6 +147,7 @@ let g:go_highlight_generate_tags = 1
 let g:coc_global_extensions = [
 			\ 'coc-tsserver',
 			\ 'coc-eslint',
+			\ 'coc-prettier',
 			\ 'coc-go',
 			\ ]
 
@@ -306,3 +316,4 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
