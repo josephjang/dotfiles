@@ -50,8 +50,17 @@ export GOPATH=$HOME/projects/go-projects
 export GOBIN=$HOME/projects/go-projects/bin
 
 #
+# HOMEBREW_PREFIX
+#
+if hash brew 2> /dev/null; then
+	export HOMEBREW_BIN=`brew --prefix`/bin
+else
+	export HOMEBREW_BIN=
+fi
+
+
+#
 # PATH
 #
-
-export PATH=$PATH:/opt/homebrew/bin:$GOBIN
+export PATH=$PATH:$HOMEBREW_BIN:$GOBIN
 
