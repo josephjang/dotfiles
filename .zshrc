@@ -63,10 +63,14 @@ unset file
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
-# nvm
+# nvm on Mac OS
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# nvm on Arch Linux
+[ -s "/usr/share/nvm/init-nvm.sh" ] && . "/usr/share/nvm/init-nvm.sh"
+[ -s "/usr/share/nvm/bash_completion" ] && . "/usr/share/nvm/bash_completion"
 
 # asdf
 [ -s "/opt/homebrew/opt/asdf/asdf.sh" ] && . "/opt/homebrew/opt/asdf/asdf.sh"
