@@ -58,9 +58,13 @@ else
 	export HOMEBREW_BIN=
 fi
 
+#
+# XDG_BIN_HOME
+#
+export XDG_BIN_HOME=$HOME/.local/bin
 
 #
 # PATH
 #
-export PATH=$PATH:$HOMEBREW_BIN:$GOBIN
+export PATH=$PATH:$HOMEBREW_BIN:$GOBIN:$XDG_BIN_HOME
 
