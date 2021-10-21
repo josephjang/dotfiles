@@ -38,7 +38,7 @@ HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 
 # Which plugins would you like to load?
-plugins=(grc kubectl pip pipenv rust rustup z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(grc kubectl pip pipenv rust rustup z zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
 
 # auto-completion is provided by Arch Linux packages:
 #	git docker pipenv
