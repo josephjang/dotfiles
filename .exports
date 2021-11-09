@@ -63,8 +63,11 @@ fi
 #
 export XDG_BIN_HOME=$HOME/.local/bin
 
+
+export CARGO_BIN="$HOME/.cargo/bin"
+
 #
 # PATH
 #
-export PATH=$PATH:$HOMEBREW_BIN:$GOBIN:$XDG_BIN_HOME
+export PATH=$PATH:$HOMEBREW_BIN:$GOBIN:$XDG_BIN_HOME:$CARGO_BIN
 
