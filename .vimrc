@@ -48,6 +48,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Literate CoffeeScript syntax highlighting and indentation support for vim
 "Plug 'jwhitley/vim-literate-coffeescript'
 
+" basic vim/terraform integration
+Plug 'hashivim/vim-terraform'
+
 call plug#end()
 
 syntax on
