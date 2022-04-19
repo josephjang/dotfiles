@@ -69,6 +69,9 @@ set hlsearch
 
 set clipboard^=unnamed,unnamedplus
 
+" Global status line at the bottom instead of one for each window
+set laststatus=3
+
 au BufRead,BufNewFile *.thrift set filetype=thrift
 au BufRead,BufNewFile *.proto set filetype=proto
 au! Syntax thrift source ~/.vim/thrift.vim
