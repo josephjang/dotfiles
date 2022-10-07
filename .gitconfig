@@ -15,3 +15,13 @@
 	defaultBranch = main
 [pull]
 	ff = only
+[diff]
+	tool = difftastic
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft --display inline "$LOCAL" "$REMOTE"
+[pager]
+	difftool = true
+[alias]
+	dft = difftool
