@@ -1,2 +1,3 @@
 # Load ~/.exports
-[ -r ".exports" ] && source ".exports"
+[ -r "$HOME/.exports" ] && source "$HOME/.exports"
+
