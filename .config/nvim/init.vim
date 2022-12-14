@@ -63,7 +63,7 @@ let g:lightline = { 'colorscheme': 'tender' }
 " plugin: nvim-treesitter
 "
 
-lua require'nvim-treesitter.configs'.setup{ensure_installed={"go"},highlight={enable=true,additional_vim_regex_highlighting=false,},indent={enable=true}}
+lua require'nvim-treesitter.configs'.setup{ensure_installed={"go","bash","vim"},highlight={enable=true,additional_vim_regex_highlighting=false,},indent={enable=true}}
 
 "
 " plugin: nvim-lspconfig
