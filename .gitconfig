@@ -5,6 +5,7 @@
 	diff = auto
 [user]
 	name = Jeongho Jang
+	useConfigOnly = true
 [credential]
 	helper = cache --timeout 3600
 [push]
