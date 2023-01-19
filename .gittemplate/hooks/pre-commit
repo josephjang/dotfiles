@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ -z "`git config --local --get user.email`" ]]; then
+  echo 'Run one of the following first:'
+  echo
+  echo '  git config --local user.email josephjang@gmail.com'
+  echo '  git config --local user.email jeongho@dable.io'
+  echo
+  exit 1
+fi
+

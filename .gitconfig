@@ -5,13 +5,13 @@
 	diff = auto
 [user]
 	name = Jeongho Jang
-	email = josephjang@gmail.com
 [credential]
 	helper = cache --timeout 3600
 [push]
 	default = simple
 [init]
 	defaultBranch = main
+	templateDir = ~/.gittemplate
 [pull]
 	ff = only
 [diff]
