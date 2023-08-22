@@ -70,8 +70,10 @@ export XDG_BIN_HOME=$HOME/.local/bin
 
 export CARGO_BIN="$HOME/.cargo/bin"
 
+export GOLAND_BIN="/opt/goland/bin"
+
 #
 # PATH
 #
-export PATH=$PATH:$HOMEBREW_BIN:$GOBIN:$XDG_BIN_HOME:$CARGO_BIN
+export PATH=$PATH:$HOMEBREW_BIN:$GOBIN:$XDG_BIN_HOME:$CARGO_BIN:$GOLAND_BIN
 
