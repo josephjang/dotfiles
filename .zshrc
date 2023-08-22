@@ -79,3 +79,8 @@ export NVM_DIR="$HOME/.nvm"
 # asdf
 [ -s "/opt/homebrew/opt/asdf/asdf.sh" ] && . "/opt/homebrew/opt/asdf/asdf.sh"
 
+# zsh-history-substring-search
+# binds UP and DOWN arrow keys
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
