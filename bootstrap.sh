@@ -7,14 +7,14 @@ git submodule init
 git submodule update
 
 function dryRun() {
-  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude .gitmodules \
+  rsync --exclude ".git/" --exclude ".git" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude .gitmodules \
     --dry-run \
     --include ".**" \
     --archive --verbose . ~
 }
 
 function run() {
-  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude .gitmodules \
+  rsync --exclude ".git/" --exclude ".git" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude .gitmodules \
     --include ".**" \
     --archive --verbose . ~
 }
