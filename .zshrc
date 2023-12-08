@@ -80,7 +80,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/asdf/asdf.sh" ] && . "/opt/homebrew/opt/asdf/asdf.sh"
 
 # jabba
-[ -s "/usr/local/opt/jabba/share/jabba/jabba.sh" ] && . "/usr/local/opt/jabba/share/jabba/jabba.sh"
+[ -s "/usr/local/opt/jabba/jabba.sh" ] && . "/usr/local/opt/jabba/jabba.sh"
 
 # zsh-history-substring-search
 # binds UP and DOWN arrow keys
