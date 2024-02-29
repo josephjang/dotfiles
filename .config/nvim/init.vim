@@ -40,8 +40,11 @@ set hlsearch
 
 set clipboard^=unnamed,unnamedplus
 
+" Always show status line
+" https://neovim.io/doc/user/options.html#'laststatus'
+set laststatus=2
 " Global status line at the bottom instead of one for each window
-set laststatus=3
+"set laststatus=3
 
 " Enables 24-bit RGB color in the TUI
 set termguicolors
