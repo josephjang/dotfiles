@@ -7,6 +7,9 @@ call plug#begin()
 " A 24bit colorscheme for Vim, Airline and Lightline
 Plug 'jacoborus/tender.vim'
 
+" 🍨 Soothing pastel theme for (Neo)vim
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+
 " A light and configurable statusline/tabline plugin for Vim
 Plug 'itchyny/lightline.vim'
 
@@ -66,10 +69,11 @@ set laststatus=2
 set termguicolors
 
 "
-" plugin: tender
+" plugin: catppuccin
 "
 
-colorscheme tender
+colorscheme catppuccin
+
 
 "
 " plugin: lightline
