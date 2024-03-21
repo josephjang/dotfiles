@@ -156,6 +156,11 @@ EOF
 " plugin: nvim-cmp
 "
 
+"
+" Based on nvim-cmp's recommended configuration:
+" https://github.com/hrsh7th/nvim-cmp?tab=readme-ov-file#recommended-configuration
+"
+
 lua <<EOF
   -- Set up nvim-cmp.
   local cmp = require'cmp'
@@ -177,6 +182,9 @@ lua <<EOF
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+	  -- Tab to select items
+	  ['<Tab>'] = cmp.mapping.select_next_item(),
+	  ['<S-Tab>'] = cmp.mapping.select_prev_item(),
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
