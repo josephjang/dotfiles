@@ -74,7 +74,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # nvm on Arch Linux
 [ -s "/usr/share/nvm/init-nvm.sh" ] && . "/usr/share/nvm/init-nvm.sh"
-[ -s "/usr/share/nvm/bash_completion" ] && . "/usr/share/nvm/bash_completion"
 
 # asdf
 [ -s "/opt/homebrew/opt/asdf/asdf.sh" ] && . "/opt/homebrew/opt/asdf/asdf.sh"
