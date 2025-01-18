@@ -40,6 +40,8 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 # Which plugins would you like to load?
 plugins=(grc kubectl pip pipenv rust terraform zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting aws zsh-fzf-history-search tmux zoxide)
 
+plugins+=(conda-zsh-completion)
+
 # auto-completion is provided by Arch Linux packages:
 #	git docker pipenv
 # auto-completion is provided by zsh-completions:

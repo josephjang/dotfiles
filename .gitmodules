@@ -28,3 +28,6 @@
 [submodule ".oh-my-zsh-custom/plugins/zsh-fzf-history-search"]
 	path = .oh-my-zsh-custom/plugins/zsh-fzf-history-search
 	url = https://github.com/joshskidmore/zsh-fzf-history-search
+[submodule ".oh-my-zsh-custom/plugins/conda-zsh-completion"]
+	path = .oh-my-zsh-custom/plugins/conda-zsh-completion
+	url = https://github.com/conda-incubator/conda-zsh-completion
