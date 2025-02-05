@@ -70,3 +70,9 @@ unset file
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
+# mise
+# https://github.com/jdx/mise
+if command -v mise &> /dev/null; then
+  eval "$(mise activate zsh)"
+fi
+
