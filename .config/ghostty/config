@@ -1,8 +1,11 @@
 font-family = "Operator Mono Ssm Lig"
 
-font-size = 16
+font-size = 11
 
 window-width = 88
 window-height = 41
 
 initial-command = "tmux new -A"
+
+theme = Dimidium
+
