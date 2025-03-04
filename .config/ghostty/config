@@ -9,3 +9,7 @@ initial-command = "tmux new -A"
 
 theme = Dimidium
 
+#window-decoration = none
+gtk-titlebar = false
+macos-titlebar-style = "hidden"
+
