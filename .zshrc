@@ -2,7 +2,9 @@
 # Logo
 #
 
-if hash neofetch 2> /dev/null; then
+if hash fastfetch 2> /dev/null; then
+	fastfetch
+elif hash neofetch 2> /dev/null; then
 	neofetch
 elif hash archey 2> /dev/null; then
 	archey -c
