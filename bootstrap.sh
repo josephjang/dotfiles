@@ -15,6 +15,7 @@ EXCLUDE_FILES=(
     ".git"
     ".DS_Store"
     "bootstrap.sh"
+    "dotfiles_status.sh"
     "README.md"
     ".gitmodules"
 )
