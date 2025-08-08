@@ -17,7 +17,7 @@ local lastInputSource = hs.keycodes.currentSourceID()
 local lastApp = hs.application.frontmostApplication():name()
 
 -- Watch for app focus changes
-local appWatcher = hs.application.watcher.new(function(appName, eventType, app)
+appWatcher = hs.application.watcher.new(function(appName, eventType, app)
     if eventType == hs.application.watcher.activated then
         hs.console.printStyledtext("Switched to app: " .. appName)
         if string.lower(appName) == "ghostty" then
@@ -31,5 +31,26 @@ local appWatcher = hs.application.watcher.new(function(appName, eventType, app)
         lastApp = appName
     end
 end)
+
+-- Cmd+숫자 → 해당 번호의 Space로 이동
+local spaces = require("hs.spaces")
+local screen = require("hs.screen")
+local hotkey = require("hs.hotkey")
+
+local function gotoSpaceByIndex(i)
+  local all = spaces.allSpaces()                     -- 화면 UUID → space ID 배열
+  local uuid = screen.primaryScreen():getUUID()      -- 기본(주) 화면
+  local list = all[uuid]
+  if list and list[i] then
+    spaces.gotoSpace(list[i])                        -- i번째 space로 이동
+  else
+    hs.alert.show("Space " .. i .. " 없음")
+  end
+end
+
+for i = 1, 9 do
+  hotkey.bind({ "cmd" }, tostring(i), function() gotoSpaceByIndex(i) end)
+end
+
 
 appWatcher:start()
