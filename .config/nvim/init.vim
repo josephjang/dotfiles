@@ -83,34 +83,23 @@ colorscheme catppuccin
 let g:lightline = { 'colorscheme': 'tender' }
 
 "
-" plugin: nvim-treesitter
+" lspconfig
 "
 
 lua << EOF
 
-require 'nvim-treesitter.configs'.setup {
-	ensure_installed = { "bash", "go", "gomod", "lua", "vim", "rust", },
+-- Use the new vim.lsp.config API instead of lspconfig.setup()
+local lsp_config = require('lspconfig.configs')
 
-	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting=false,
-	},
-
-	indent = {
-		enable = true
-	}
+-- Configure gopls using the new API
+vim.lsp.config.gopls = {
+  cmd = { 'gopls' },
+  filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+  root_markers = { 'go.work', 'go.mod', '.git' },
 }
 
-EOF
-
-"
-" plugin: nvim-lspconfig
-"
-
-lua << EOF
-
-local lspconfig = require('lspconfig')
-lspconfig.gopls.setup {}
+-- Enable gopls
+vim.lsp.enable('gopls')
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -149,6 +138,28 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
+
+EOF
+
+
+"
+" plugin: nvim-treesitter
+"
+
+lua << EOF
+
+require 'nvim-treesitter.configs'.setup {
+	ensure_installed = { "bash", "go", "gomod", "lua", "vim", "rust", },
+
+	highlight = {
+		enable = true,
+		additional_vim_regex_highlighting=false,
+	},
+
+	indent = {
+		enable = true
+	}
+}
 
 EOF
 
