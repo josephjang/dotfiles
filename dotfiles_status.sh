@@ -95,6 +95,9 @@ find "${find_command_args[@]}" | while read -r dotfile_path; do
         # For regular files, check content diff
         if ! diff -q "$dotfile_path" "$home_file_path" > /dev/null; then
              echo -e "📝 ${C_BLUE}[Content Differs] Changes detected in: ${relative_path}${C_RESET}"
+             echo -e "${C_BLUE}--- Diff ---${C_RESET}"
+             diff "$dotfile_path" "$home_file_path" || true
+             echo -e "${C_BLUE}--- End Diff ---${C_RESET}"
              has_changes=true
         fi
     fi
