@@ -111,6 +111,26 @@ vim.lsp.config.gopls = {
 -- Enable gopls
 vim.lsp.enable('gopls')
 
+-- Zig (zls)
+
+-- Configure zls
+vim.lsp.config.zls = {
+  cmd = { 'zls' },
+  filetypes = { 'zig', 'zir' },
+  root_markers = { 'zls.json', 'build.zig', '.git' },
+}
+
+-- Enable zls
+vim.lsp.enable('zls')
+
+-- zig fmt on save
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*.zig',
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
+
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
@@ -159,7 +179,7 @@ EOF
 lua << EOF
 
 require 'nvim-treesitter.configs'.setup {
-	ensure_installed = { "bash", "go", "gomod", "lua", "vim", "rust", },
+	ensure_installed = { "bash", "go", "gomod", "lua", "vim", "rust", "zig", },
 
 	highlight = {
 		enable = true,
