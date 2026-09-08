@@ -1,3 +1,7 @@
+# Load the environment before checking commands or initializing plugins.
+# In particular, Homebrew and Cargo must be on PATH for the first shell.
+[[ ! -r "$HOME/.exports" ]] || source "$HOME/.exports"
+
 #
 # Logo
 #
@@ -58,11 +62,8 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Load ~/.exports and ~/.aliases
-for file in ~/.{exports,aliases}; do
-	[ -r "$file" ] && source "$file"
-done
-unset file
+# Load aliases after Oh My Zsh so user aliases take precedence.
+[[ ! -r "$HOME/.aliases" ]] || source "$HOME/.aliases"
 
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
@@ -77,4 +78,3 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 if command -v mise &> /dev/null; then
   eval "$(mise activate zsh)"
 fi
-
