@@ -10,8 +10,9 @@ window-height = 38
 window-padding-x = 6
 window-padding-y = 4
 
-# Attach every terminal to the same named tmux session.
-command = "tmux new-session -A -s main"
+# Load Homebrew's PATH, then attach to an existing session or create one.
+# Ghostty's command launcher does not source .zshrc.
+command = /bin/zsh -lc 'source "$HOME/.exports"; if tmux has-session 2>/dev/null; then exec tmux attach-session; else exec tmux new-session; fi'
 
 macos-option-as-alt = left
 
