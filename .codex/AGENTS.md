@@ -222,7 +222,9 @@ code comment that documents the deferred concern (the flagged smell, the
 latent hazard, the TODO-worthy gap) and update it to point at the issue
 URL, so the tracked follow-up is discoverable from the source. If no such
 comment exists yet, add a short one at the site. A filed issue that the
-code never mentions is a dead link the next reader won't find.
+code never mentions is a dead link the next reader won't find. Carry the
+link in a pull request that is open or due anyway; never open one for the
+link alone.
 
 ## Reader-facing text
 
