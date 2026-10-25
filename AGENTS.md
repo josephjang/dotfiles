@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This repository contains personal macOS and Linux configuration, organized to mirror the home directory. Root dotfiles configure shells (`.zshrc`, `.bash_profile`, `.exports`, `.aliases`), Vim, Git, and tmux. Application settings live under `.config/`, including Neovim, Ghostty, Kitty, i3, and Rofi. Hammerspoon automation lives in `.hammerspoon/init.lua`; themes and other visual assets sit alongside their application configurations.
+This repository contains personal macOS and Linux configuration, organized to mirror the home directory. Root dotfiles configure shells (`.zshrc`, `.bash_profile`, `.exports`, `.aliases`), Vim, Git, and tmux. Application settings live under `.config/`, including Neovim, Ghostty, Kitty, i3, and Rofi. Hammerspoon automation lives in `.hammerspoon/init.lua`; themes and other visual assets sit alongside their application configurations. The user-level instructions for coding agents live in `.codex/AGENTS.md`, which Codex reads; `.claude/CLAUDE.md` only imports that file, so Claude Code reads the same text. Edit the rules there, never in a copy under the home directory.
 
 Third-party components such as `.oh-my-zsh`, `.oh-my-zsh-custom/` plugins, and `.tmux/plugins/tpm` are tracked through Git submodules listed in `.gitmodules`. Keep upstream component changes separate from personal configuration edits.
 
