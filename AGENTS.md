@@ -31,4 +31,4 @@ Use short, imperative commit subjects, commonly prefixed by the component, such 
 
 ## Configuration Safety
 
-Review home-directory differences before synchronization and back up affected files. Bootstrap copies files rather than creating symlinks, and currently does not exclude `AGENTS.md`. Keep credentials and machine-specific secrets out of tracked files.
+Review home-directory differences before synchronization and back up affected files. Bootstrap copies files rather than creating symlinks, and leaves this root `AGENTS.md` out of the home directory; its exclusion is anchored to the root so that `.codex/AGENTS.md` is still copied. Keep credentials and machine-specific secrets out of tracked files.

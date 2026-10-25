@@ -14,6 +14,8 @@ C_BLUE='\033[0;34m'
 # This is for excluding the contents of the main .git directory.
 EXCLUDE_PATHS=(
     "./.git/*"
+    # This repository's own guidelines; .codex/AGENTS.md is still compared.
+    "./AGENTS.md"
 )
 
 # List of file NAMES to exclude (matches the basename anywhere in the tree)

@@ -18,6 +18,9 @@ EXCLUDE_FILES=(
     "dotfiles_status.sh"
     "README.md"
     ".gitmodules"
+    # Anchored to the repository root: this repository's own guidelines,
+    # not .codex/AGENTS.md, which is meant for the home directory.
+    "/AGENTS.md"
 )
 
 # --- Function Definitions ---
