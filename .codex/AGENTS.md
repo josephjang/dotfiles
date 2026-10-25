@@ -29,6 +29,13 @@ first justifies changing position.
 * No sycophancy ("Great question!"), hedge-stacking ("maybe it could
 perhaps"), performative agreement, or apology inflation. Pick a position;
 acknowledge, fix, move on.
+* **Plain names in chat.** The user reads the chat without the documents
+open, so call a requirement, decision or finding by what it is ("the rule
+that reruns an interrupted check"), not by its ID ("R3"). An ID may follow
+in parentheses; no sentence depends on it.
+* **Full paths for files the user opens.** Name each by its absolute path,
+never a shorthand such as "the scratch directory", and say when it sits in
+a temporary directory that may be cleaned.
 
 ## Disposition
 
@@ -253,6 +260,15 @@ result before handing it over. Caption each figure and mark an invented
 example as invented.
 * **Record a decision when it is reached**, in a dated decision section:
 the decision, its reason, and where it was carried out.
+* **Findings, not the history of finding them.** State what is true for
+the reader: no round labels, no account of how the setup changed, no
+corrections made along the way. Name runs and cases by what they are, and
+put the evidence locators in a table at the end.
+* **Cite a commit hash only when it cannot change**, in any text, chat
+included: a commit already on the default branch, or one in another
+repository's published history. A rebase, an amend or a rebase merge gives
+a branch's commits new hashes, so name that work by its pull request,
+commit subject, test or file.
 
 ### Korean documents
 
@@ -341,10 +357,12 @@ not gitignore-aware: it walks `.git/` and binaries too.
 
 ## Running commands
 
-The shell differs by machine. Check which one you are in before writing an
-exit-code or glob idiom; the two sets below are not interchangeable.
+The shell differs by machine: zsh on macOS, bash on Linux, PowerShell 7 on
+Windows, where a Bash tool, when one is offered, is Git Bash. Check which
+one you are in before writing an exit-code or glob idiom; the idioms below
+are not interchangeable, and one command never mixes two shells' syntax.
 
-### macOS: zsh
+### zsh
 
 * Pipelines expose per-stage exit codes in the lowercase, **1-indexed**
 `pipestatus` array. Use `${pipestatus[1]}` for the first/upstream command;
@@ -364,26 +382,24 @@ as-is: `grep --include='*.ts' --include='*.tsx'`, `find . -name '*.tsx'`,
 some_command 2>&1 | tee build.log | tail -30; echo "EXIT: ${pipestatus[1]}"
 ```
 
-### Windows: PowerShell and Git Bash
+### bash (Linux, and Git Bash on Windows)
 
-PowerShell 7 is the primary shell; a Bash tool, when one is offered, is Git
-Bash (POSIX bash, not zsh). Each takes its own syntax; never mix them in
-one command.
-
-* **Git Bash:** use bash's `${PIPESTATUS[0]}` (uppercase, 0-indexed) for
-the upstream command's exit code; `pipestatus` is unset there. An
-unmatched glob passes through literally, but quote it anyway so a command
-reads the same on both machines. Use `/dev/null`, forward slashes and
-`$VAR`.
-* **PowerShell:** a native command's exit code is `$LASTEXITCODE`, read in
-the very next statement; `$?` is only a boolean. `&&`/`||` chain as in
-bash and `2>$null` discards stderr, but bash test syntax (`[ -f x ]`),
-backtick substitution and `<<` heredocs are parse errors or mean something
-else.
+* Use `${PIPESTATUS[0]}` (uppercase, 0-indexed) for the upstream command's
+exit code; zsh's `pipestatus` is unset here. An unmatched glob passes
+through literally, but quote it anyway so a command reads the same in zsh.
+* Under Git Bash, use `/dev/null`, forward slashes and `$VAR`, never the
+Windows forms.
 
 ```sh
 some_command 2>&1 | tee build.log | tail -30; echo "EXIT: ${PIPESTATUS[0]}"
 ```
+
+### PowerShell
+
+* A native command's exit code is `$LASTEXITCODE`, read in the very next
+statement; `$?` is only a boolean. `&&`/`||` chain as in bash and
+`2>$null` discards stderr, but bash test syntax (`[ -f x ]`), backtick
+substitution and `<<` heredocs are parse errors or mean something else.
 
 ```powershell
 some_command 2>&1 | Tee-Object build.log | Select-Object -Last 30; "EXIT: $LASTEXITCODE"
@@ -396,3 +412,10 @@ Pipe long or verbose commands through `tee` to a descriptive log
 `tail`/`head`, and print the upstream command's exit code with the shell's
 own idiom above, since piping moves `$?` to the last stage. When the slice
 isn't enough, read the log file instead of re-running.
+
+Never delete through a path built from a variable that may be empty or
+unset: `rm -rf "$DIR/"` with an empty `DIR` deletes the root. Use a literal
+absolute path, or guard the variable (`${DIR:?}`) and check that the path
+lies inside the directory you mean; prefer `git worktree remove` or
+`git clean` on a named path. When you delegate work that may delete files,
+put this rule in the delegated prompt.
