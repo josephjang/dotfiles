@@ -42,14 +42,11 @@ export GOPATH=$HOME/.local/share/go
 export GOBIN=$GOPATH/bin
 
 #
-# HOMEBREW_PREFIX
+# Homebrew
 #
-if hash brew 2> /dev/null; then
-	export HOMEBREW_BIN=`brew --prefix`/bin
-else
-	export HOMEBREW_BIN=
-fi
-
+# shellenv puts Homebrew's bin and sbin on PATH on Apple Silicon. On Intel
+# Macs, /usr/local/bin is already on the default PATH.
+#
 if test -s "/opt/homebrew/bin/brew"; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
@@ -67,5 +64,5 @@ export GOLAND_BIN="/opt/goland/bin"
 #
 # PATH
 #
-export PATH=$XDG_BIN_HOME:$PATH:$HOMEBREW_BIN:$GOBIN:$CARGO_BIN:$GOLAND_BIN
+export PATH=$XDG_BIN_HOME:$PATH:$GOBIN:$CARGO_BIN:$GOLAND_BIN
 
