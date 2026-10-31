@@ -44,7 +44,16 @@ HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 
 # Which plugins would you like to load?
-plugins=(grc kubectl pip pipenv rust terraform z zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting aws zsh-fzf-history-search tmux zoxide)
+plugins=(grc kubectl pip pipenv rust terraform zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting aws zsh-fzf-history-search tmux)
+
+# Directory jumping with `z`: zoxide where it is installed, otherwise the
+# bundled z plugin, which needs nothing installed. Loading both would keep
+# two separate histories, and the zoxide plugin warns when zoxide is missing.
+if (( $+commands[zoxide] )); then
+	plugins+=(zoxide)
+else
+	plugins+=(z)
+fi
 
 plugins+=(conda-zsh-completion)
 
