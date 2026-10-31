@@ -64,5 +64,32 @@ export GOLAND_BIN="/opt/goland/bin"
 #
 # PATH
 #
-export PATH=$XDG_BIN_HOME:$PATH:$GOBIN:$CARGO_BIN:$GOLAND_BIN
+# This file is sourced again by shells that inherit PATH (a shell inside
+# tmux, a nested login shell), so each entry is added only when missing.
+# An empty directory is skipped: an empty PATH entry means the current
+# directory.
+#
+_path_prepend() {
+	[ -n "$1" ] || return 0
+	case ":$PATH:" in
+		*":$1:"*) ;;
+		*) PATH="$1${PATH:+:$PATH}" ;;
+	esac
+}
+
+_path_append() {
+	[ -n "$1" ] || return 0
+	case ":$PATH:" in
+		*":$1:"*) ;;
+		*) PATH="${PATH:+$PATH:}$1" ;;
+	esac
+}
+
+_path_prepend "$XDG_BIN_HOME"
+_path_append "$GOBIN"
+_path_append "$CARGO_BIN"
+_path_append "$GOLAND_BIN"
+export PATH
+
+unset -f _path_prepend _path_append
 
